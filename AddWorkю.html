@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <title>Добавить работу</title>
+    <link rel="stylesheet" href="style.AddWork.css">
+</head>
+<body>
+    <div class="main-page">
+        <div class="bg-card">
+            
+            <header class="main-header">
+                <div class="header-content">
+                    <div class="header-logo-block">
+                        <div class="logo-image">
+                            <img src="asset/logo.png" alt="Логотип">
+                        </div>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="#" class="nav-link">Новости</a>
+                        <a href="#" class="nav-link">Поиск фрилансера</a>
+                        <a href="#" class="nav-link">Каталог заказов</a>
+                    </nav>
+
+                    <div class="header-profile">
+                        <div class="profile-avatar-icon">
+                            <div class="user-head"></div>
+                            <div class="user-shoulders"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="create-work-block">
+                <a href="editProfile.html" class="btn-back">
+                    <span class="arrow-icon">
+                        <img src="asset/arrow_right_alt.svg" alt="Back">
+                    </span>
+                    Назад
+                </a>
+
+                <h1 class="page-main-title">Создание новой работы</h1>
+                <p class="page-subtitle">Поделитесь своим проектом с другими</p>
+
+                <div class="form-container" id="workForm">
+                    <div class="left-column">
+                        <div class="form-section">
+                            <h2 class="section-title">Загрузка изображения</h2>
+                            <div class="upload-zone">
+                                <input type="file" id="workImageInput" accept="image/*" style="display: none;">
+                                <div class="upload-icon-box">
+                                    <div class="png-icon">
+                                        <img src="asset/png.svg" alt="Upload photo">
+                                    </div>
+                                </div>
+                                <p class="upload-text-1">Перетащите изображение сюда</p>
+                                <p class="upload-text-2">или нажмите для выбора</p>
+                                <p class="upload-format-info">JPG, PNG, WEBP до 10МВ</p>
+                            </div>
+                        </div>
+
+                        <div class="form-section" id="workType">
+                            <h2 class="section-title">Условия работы</h2>
+                            
+                            <div class="form-group-field">
+                                <label class="field-label">Тип</label>
+                                <div class="select-wrapper">
+                                    <select class="custom-select">
+                                        <option value="" disabled selected hidden></option>
+                                        <option value="Веб-дизайн">Веб-дизайн</option>
+                                        <option value="Иллюстрация">Иллюстрация</option>
+                                        <option value="Разработка">Разработка</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <img src="asset/down.svg" alt="Select">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-field">
+                                <label class="field-label">Бюджет</label>
+                                <div class="input-wrapper">
+                                    <input type="text" class="custom-input" id="workBudget" placeholder="Введите бюджет">
+                                </div>
+                            </div>
+                            <div class="form-group-field">
+                                <label class="field-label">Дедлайн</label>
+                                <div class="select-wrapper">
+                                    <select class="custom-select">
+                                        <option value="" disabled selected hidden></option>
+                                        <option value="1">1-3 дня</option>
+                                        <option value="2">Неделя</option>
+                                        <option value="3">2 недели</option>
+                                        <option value="4">Месяц</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <img src="asset/down.svg" alt="Select">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-column">
+                        <div class="form-group-field spec-counter-pos">
+                            <label class="field-label-large">Название работы</label>
+                            <input type="text" class="custom-input-large" id="workTitle" placeholder="Введите название работы" maxlength="100">
+                            <span class="char-counter">0/100</span>
+                        </div>
+
+                        <div class="form-group-field spec-counter-pos">
+                            <label class="field-label-large">Описание</label>
+                            <textarea class="custom-textarea" id="workDescription" placeholder="Расскажите о своем проекте" maxlength="1000"></textarea>
+                            <span class="char-counter">0/1000</span>
+                        </div>
+
+                        <div class="form-group-field">
+                            <label class="field-label-large">Теги</label>
+                            <input type="text" class="custom-input-tags" id="workTags" placeholder="Введите теги через запятую">
+                            <p class="tags-hint">Добавьте теги, которые описывают технологии и инструменты</p>
+                        </div>
+
+                        <div class="popular-tags-container">
+                            <span class="popular-tags-title">Популярные теги :</span>
+                            <div class="tags-flex-wrapper">
+                                <div class="tag-badge tag-figma">Figma</div>
+                                <div class="tag-badge tag-next">Next.js</div>
+                                <div class="tag-badge tag-tailwind">Tailwind CSS</div>
+                                <div class="tag-badge tag-react">React</div>
+                                <div class="tag-badge tag-ts">TypeScript</div>
+                                <div class="tag-badge tag-uiux">UI/UX</div>
+                                <div class="tag-badge tag-js">JavaScript</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-divider-line"></div>
+
+                    <div class="form-buttons-group">
+                        <button type="button" class="btn-draft">Сохранить в черновик</button>
+                        <button type="submit" class="btn-publish" id="publishBtn">
+                            Опубликовать работу 
+                            <span class="publish-icon">
+                                <img src="asset/icomWork.svg" alt="Publish">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="pup2-footer">
+                <div class="pup2-footer-ornament"></div>
+                <div class="pup2-footer-main">
+                    <div class="pup2-footer-container">
+                        <div class="pup2-footer-brand">
+                            <a href="#" class="pup2-footer-logo-link">
+                                <img src="asset/logo.png" alt="Connect Логотип" class="pup2-footer-logo-img">
+                            </a>
+                            <p class="pup2-footer-desc">
+                                Фриланс-сайт соединяет бизнесы с фрилансерами, делая совместную работу над проектами более эффективной.
+                            </p>
+                            <div class="pup2-footer-socials">
+                                <a href="#" class="social-link tg-link" title="Telegram"></a>
+                                <a href="#" class="social-link vk-link" title="VK"></a>
+                                <a href="#" class="social-link gh-link" title="Github"></a>
+                            </div>
+                        </div>
+
+                        <div class="pup2-footer-menu">
+                            <div class="pup2-menu-col">
+                                <h4 class="pup2-menu-title">ПРОДУКТ</h4>
+                                <a href="#" class="pup2-menu-item">О нас</a>
+                                <a href="#" class="pup2-menu-item">Команда</a>
+                                <a href="#" class="pup2-menu-item">Вакансии</a>
+                            </div>
+                            <div class="pup2-menu-col">
+                                <h4 class="pup2-menu-title">ПОДДЕРЖКА</h4>
+                                <a href="#" class="pup2-menu-item">Как это работает</a>
+                                <a href="#" class="pup2-menu-item">Безопасность</a>
+                                <a href="#" class="pup2-menu-item">Центр помощи</a>
+                            </div>
+                            <div class="pup2-menu-col">
+                                <h4 class="pup2-menu-title">ФРИЛАНС</h4>
+                                <a href="#" class="pup2-menu-item">Услуги</a>
+                                <a href="#" class="pup2-menu-item">Услуги по странам</a>
+                                <a href="#" class="pup2-menu-item">Специализации</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="pup2-footer-line">
+                    <div class="pup2-footer-bottom">
+                        <p class="pup2-copyright">© 2026 Connect. Все права защищены.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>  
+    
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const tagsInput = document.getElementById('workTags');
+    const tagBadges = document.querySelectorAll('.tag-badge');
+    const publishBtn = document.getElementById('publishBtn');
+
+    // 1. Логика добавления популярных тегов при клике
+    tagBadges.forEach(badge => {
+        badge.addEventListener('click', () => {
+            const tagValue = badge.textContent.trim();
+            let currentTags = tagsInput.value.split(',').map(t => t.trim()).filter(t => t !== "");
+
+            // Добавляем тег, если его еще нет в списке
+            if (!currentTags.includes(tagValue)) {
+                currentTags.push(tagValue);
+                tagsInput.value = currentTags.join(', ');
+            }
+        });
+    });
+
+    // 2. Логика публикации (сбор данных)
+    publishBtn.addEventListener('click', () => {
+        // Собираем все теги из поля ввода
+        const rawTags = tagsInput.value.split(',').map(t => t.trim()).filter(t => t !== "");
+        
+        // Объект с данными для отправки на сервер
+        const workData = {
+            title: document.getElementById('workTitle').value,
+            description: document.getElementById('workDescription').value,
+            budget: document.getElementById('workBudget').value,
+            tags: rawTags,
+            // Сюда можно добавить выбор из селектов (тип, дедлайн)
+        };
+
+        // Временная проверка: выводим в консоль
+        console.log("Данные для отправки:", workData);
+        alert("Работа успешно подготовлена! Данные в консоли браузера (F12).");
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.catalog.css">
+    <title>Каталог заказов</title>
+</head>
+<body>
+    <div class="main-page">
+        <div class="bg-card">
+            <header class="main-header">
+                <a href="home (entrance).html">
+                <div class="logo-block">
+                    <img src="asset/logo.png" alt="" class="logo-image">
+                </div>
+                </a>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link link-news">Новости</a>
+                    <a href="#" class="nav-link link-search">Поиск фрилансера</a>
+                    <a href="catalog(design).html" class="nav-link link-catalog">Каталог заказов</a>
+                </nav>
+
+                <a href="myProfile.html" class="user-profile-trigger">
+                    <div class="profile-ellipse-bg">
+                        <div class="profile-avatar-group">
+                            <div class="profile-avatar-head"></div>
+                            <div class="profile-avatar-body"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <section class="catalog-section">
+                    <h2 class="catalog-title">
+                        <span class="line-1">Каталог</span>
+                        <span class="line-2">заказов</span>
+                    </h2>
+
+                    <img src="asset/decorCart.svg" alt="" class="catalog-decor-cards">
+
+                    <div class="search-container">
+                        <img src="asset/search.svg" alt="Search" class="search-icon">
+                        <input type="text" placeholder="Поиск заказа или услуги..." class="search-input">
+                        <button type="submit" class="search-btn">
+                            <img src="asset/arrow_right_alt.svg" alt="Go">
+                        </button>
+                    </div>
+
+                    <div class="search-tags">
+                        <a href="#" class="tag-item active">Дизайн</a>
+                        <a href="#" class="tag-item">Веб-разработка</a>
+                        <a href="#" class="tag-item">Тексты</a>
+                        <a href="#" class="tag-item">Иллюстрации</a>
+                        <a href="#" class="tag-item">Маркетинг</a>
+                    </div>
+                </section>
+
+                <section class="design-section">
+                    <h2 class="design-main-title">Дизайн</h2>
+                </section>
+
+                <img src="asset/узор.svg" alt="" class="bg-pattern-left">
+                <img src="asset/узор2.svg" alt="" class="bg-pattern-right">
+            </header>
+        </div>
+
+        <aside class="categories-sidebar">
+        <h2 class="sidebar-title">Категории</h2>
+        <nav class="sidebar-menu">
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/кисть.svg" alt="" class="item-icon">
+                    <span class="item-text">Дизайн</span>
+                </span>
+                  <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="catalog(web).html" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/pc.svg" alt="" class="item-icon">
+                    <span class="item-text">Веб-разработка</span>
+                </span>
+                <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                 <span class="item-content">
+                    <img src="asset/line.svg" alt="" class="item-icon">
+                    <span class="item-text">Тексты</span>
+                 </span>
+                 <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/microphone.svg" alt="" class="item-icon">
+                    <span class="item-text">Маркетинг</span>
+                </span>
+                <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/search1.svg" alt="" class="item-icon">
+                    <span class="item-text">Популярное</span>
+                </span>
+                <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/photo camera.svg" alt="" class="item-icon">
+                    <span class="item-text">Аудио/Видео</span>
+                </span>
+                <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/text.svg" alt="" class="item-icon">
+                    <span class="item-text">Переводы</span>
+                </span>
+                 <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <span class="item-content">
+                    <img src="asset/like.svg" alt="" class="item-icon">
+                    <span class="item-text">SMM / Таргет</span>
+                </span>
+                <img src="asset/ещё.svg" alt="" class="item-arrow">
+            </a>
+        </nav>
+        </aside>
+
+        <div class="filter-sidebar-block">
+            <div class="filter-section">
+                <h2 class="filter-main-title">Бюджет</h2>
+                <div class="price-slider-container">
+        
+                </div>
+
+                 <div class="price-slider-container">
+                    <input type="range" id="price-slider" min="1000" max="500000" value="15000" class="slider">
+                    <div id="price-output">Бюджет: 15 000 ₽</div>
+                 </div>
+            </div>
+
+            <hr class="filter-divider-line">
+
+            <div class="filter-section">
+                <h3 class="filter-sub-title">Срок</h3>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">3-7 дней</span>
+                    </label>
+
+                    <label class="custom-checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">1-4 недели</span>
+                    </label>
+
+                    <label class="custom-checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">>1 месяца</span>
+                    </label>
+                </div>
+            </div>
+
+            <hr class="filter-divider-line">
+            <div class="filter-section">
+                <h3 class="filter-sub-title">Тип</h3>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">Фиксированный</span>
+                    </label>
+
+                    <label class="custom-checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">Почасовой</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <article class="order-card-first" data-price="15000">
+            <div class="order-header">
+                <h2 class="order-title">Разработка логотипа для эко-бренда</h2>
+                <div class="order-avatar"></div>
+            </div>
+
+            <div class="order-tags-row">
+                <span class="order-tag">дизайн</span>
+                <span class="order-tag">логотип</span>
+                 <span class="order-tag">иллюстрация</span>
+            </div>
+
+            <div class="order-info-row">
+                <span class="order-meta budget-meta">Бюджет : 15 000₽</span>
+                <span class="order-meta duration-meta">Срок : 5 дней</span>
+            </div>
+
+            <hr class="order-divider">
+            <p class="order-description">Предлагаю дизайн логотипа для вашего эко-бренда — чистая иллюстрация, минималистичный и узнаваемый знак. Готов продумать концепцию с природными мотивами (листья, переработка, капли, земля) и адаптировать логотип под сайт, упаковку и соцсети. Стоимость работы — 15 000 ₽, срок готовности — 5 дней. Покажу 3 варианта на выбор, после правки — финальные файлы в векторе.
+            </p>
+        </article>
+        
+        <article class="order-card-second"  data-price="7000">
+            <div class="order-header">
+                <h2 class="order-title">Серия стикеров для бренда одежды</h2>
+                <div class="order-avatar"></div>
+            </div>
+
+            <div class="order-tags-row">
+                <span class="order-tag">дизайн</span>
+                <span class="order-tag">логотип</span>
+                 <span class="order-tag">одежда</span>
+            </div>
+
+            <div class="order-info-row">
+                <span class="order-meta budget-meta">Бюджет : 7 000₽</span>
+                <span class="order-meta duration-meta">Срок : 5 дней</span>
+            </div>
+
+            <hr class="order-divider">
+            <p class="order-description">Разработаю серию стикеров для бренда одежды — 10–15 уникальных иллюстраций в едином стиле. Подойдут для упаковки, наклеек на одежду, брендирования пакетов и мерча. Стиль: скетчевый, графика, поп-арт или минимализм — на ваше усмотрение. Стоимость — 7 000 ₽, срок — 5 дней. Покажу 2 варианта стилей, после правок — вектор + PNG.
+            </p>
+        </article>
+
+       
+        <article class="order-card-third" data-price="12000">
+            <div class="order-header">
+                <a href="singleOrder(desing).html" class="order-title">Дизайн упаковки для чая</a>
+                <div class="order-avatar"></div>
+            </div>
+
+            <div class="order-tags-row">
+                <span class="order-tag">дизайн</span>
+                <span class="order-tag">иллюстарция</span>
+            </div>
+
+            <div class="order-info-row">
+                <span class="order-meta budget-meta">Бюджет : 12 000₽</span>
+                <span class="order-meta duration-meta">Срок : 5 дней</span>
+            </div>
+
+            <hr class="order-divider">
+            <p class="order-description">Разработаю дизайн упаковки для чая — минималистичная иллюстрация, природные мотивы (травы, листья, цветы), крафтовая эстетика. Подготовлю макет коробки/пачки, адаптирую под линейку из 3–4 вкусов. Стоимость — 12 000 ₽, срок — 7 дней. Покажу 2–3 варианта, после правок — исходные файлы в векторе.
+            </p>
+        </article>
+        </a>
+
+        <article class="order-card-fourth"  data-price="9000">
+            <div class="order-header">
+                <h2 class="order-title">Разработка паттерна для одежды</h2>
+                <div class="order-avatar"></div>
+            </div>
+
+            <div class="order-tags-row">
+                <span class="order-tag">дизайн</span>
+                <span class="order-tag">одежда</span>
+                <span class="order-tag">иллюстарция</span>
+            </div>
+
+            <div class="order-info-row">
+                <span class="order-meta budget-meta">Бюджет : 9 000₽</span>
+                <span class="order-meta duration-meta">Срок : 5 дней</span>
+            </div>
+
+            <hr class="order-divider">
+            <p class="order-description">Разработаю повторяющийся паттерн для одежды — принт для футболок, худи, свитшотов или платьев. Стиль: абстрактная геометрия, флора, графика или минимализм — на ваш выбор. Подготовлю цветовые вариации (3–4 расцветки) и макеты на мокапах. Стоимость — 9 000 ₽, срок — 6 дней. Покажу 2–3 концепции, финал — вектор и растр.
+            </p>
+        </article>
+
+        <article class="order-card-fifth"  data-price="15000">
+            <div class="order-header">
+                <h2 class="order-title">Брендбук для кофейни</h2>
+                <div class="order-avatar"></div>
+            </div>
+
+            <div class="order-tags-row">
+                <span class="order-tag">дизайн</span>
+                <span class="order-tag">логотип</span>
+                <span class="order-tag">иллюстарция</span>
+            </div>
+
+            <div class="order-info-row">
+                <span class="order-meta budget-meta">Бюджет : 15 000₽</span>
+                <span class="order-meta duration-meta">Срок : 5 дней</span>
+            </div>
+
+            <hr class="order-divider">
+            <p class="order-description">Разработаю полноценный брендбук для кофейни. Включу: логотип (2–3 варианта), цветовую палитру, типографику, паттерны для упаковки и стаканов, оформление меню, соцсетей и вывески. Формат — PDF + Figma. Стоимость — 25 000 ₽, срок — 10 дней. Покажу 2 концепции айдентики, после правок — финальный брендбук.
+            </p>
+        </article>
+
+        <div class="pagination-container">
+            <button class="pagination-arrow arrow-prev">
+                <svg class="arrow-icon icon-prev" viewBox="0 0 24 24">
+                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+                </svg>
+            </button>
+
+            <div class="pagination-numbers">
+                <a href="page404.html" class="page-number active">1</a>
+                <a href="page404.html" class="page-number">2</a>
+                <span class="page-dots">...</span>
+                <a href="page404.html" class="page-number">30</a>
+            </div>
+
+            <button class="pagination-arrow arrow-next">
+                <svg class="arrow-icon icon-next" viewBox="0 0 24 24">
+                    <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+                </svg>
+            </button>
+        </div>
+
+        <section class="pup2-freelancers-section">
+        <div class="pup2-photo-grid">
+            <div class="pup2-stars-plate">
+                <div class="pup2-stars-container">
+                    <img src="asset/звёзды.svg" alt="star">
+                </div>
+            </div>
+            <div class="pup2-photo-row">
+            <div class="pup2-avatar ava-1-1"></div>
+            <div class="pup2-avatar ava-1-2"></div>
+            <div class="pup2-avatar ava-1-3"></div>
+            <div class="pup2-avatar ava-1-4"></div>
+            <div class="pup2-avatar ava-1-5"></div>
+            <div class="pup2-avatar ava-1-6"></div>
+        </div>
+        <div class="pup2-photo-row">
+            <div class="pup2-avatar ava-2-1"></div>
+            <div class="pup2-avatar ava-2-2"></div>
+            <div class="pup2-avatar ava-2-3"></div>
+            <div class="pup2-avatar ava-2-4"></div>
+            <div class="pup2-avatar ava-2-5"></div>
+            <div class="pup2-avatar ava-2-6"></div>
+        </div>
+        <div class="pup2-photo-row">
+            <div class="pup2-avatar ava-3-1"></div>
+            <div class="pup2-avatar ava-3-2"></div>
+            <div class="pup2-avatar ava-3-3"></div>
+            <div class="pup2-avatar ava-3-4"></div>
+            <div class="pup2-avatar ava-3-5"></div>
+            <div class="pup2-avatar ava-3-6"></div>
+        </div>
+        <div class="pup2-photo-row">
+            <div class="pup2-avatar ava-4-1"></div>
+            <div class="pup2-avatar ava-4-2"></div>
+            <div class="pup2-avatar ava-4-3"></div>
+            <div class="pup2-avatar ava-4-4"></div>
+            <div class="pup2-avatar ava-4-5"></div>
+            <div class="pup2-avatar ava-4-6"></div>
+        </div>
+        </div>
+        <div class="pup2-freelancers-content">
+            <h2 class="pup2-freelancers-title">ОПЫТНЫЕ ФРИЛАНСЕРЫ</h2>
+            <p class="pup2-freelancers-text">Опытные фрилансеры обладают глубоким пониманием своего дела, выполняя работу высшего качества, которая превосходит ожидания клиентов.</p>
+            <button class="pup2-freelancers-btn">Смотреть анкеты</button>
+        </div>
+       </section>
+
+       <footer class="pup2-footer">
+        <div class="pup2-footer-ornament"></div>
+
+        <div class="pup2-footer-main">
+            <div class="pup2-footer-container">
+                <div class="pup2-footer-brand">
+                    <a href="#" class="pup2-footer-logo-link">
+                        <img src="asset/logo.png" alt="Connect Логотип" class="pup2-footer-logo-img">
+                    </a>
+                    <p class="pup2-footer-desc">
+                    Фриланс-сайт соединяет бизнесы с фрилансерами, делая совместную работу над проектами более эффективной.
+                    </p>
+                    <div class="pup2-footer-socials">
+                        <a href="#" class="social-link tg-link" title="Telegram"></a>
+                        <a href="#" class="social-link vk-link" title="VK"></a>
+                        <a href="#" class="social-link gh-link" title="Github"></a>
+                    </div>
+                </div>
+
+                <div class="pup2-footer-menu">
+                    <div class="pup2-menu-col">
+                        <h4 class="pup2-menu-title">ПРОДУКТ</h4>
+                        <a href="#" class="pup2-menu-item">О нас</a>
+                        <a href="#" class="pup2-menu-item">Команда</a>
+                        <a href="#" class="pup2-menu-item">Вакансии</a>
+                    </div>
+                    <div class="pup2-menu-col">
+                        <h4 class="pup2-menu-title">ПОДДЕРЖКА</h4>
+                        <a href="#" class="pup2-menu-item">Как это работает</a>
+                        <a href="#" class="pup2-menu-item">Безопасность</a>
+                        <a href="#" class="pup2-menu-item">Центр помощи</a>
+                    </div>
+                    <div class="pup2-menu-col">
+                        <h4 class="pup2-menu-title">ФРИЛАНС</h4>
+                        <a href="#" class="pup2-menu-item">Услуги</a>
+                        <a href="#" class="pup2-menu-item">Услуги по странам</a>
+                        <a href="#" class="pup2-menu-item">Специализации</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="pup2-footer-line">
+            <div class="pup2-footer-bottom">
+                <p class="pup2-copyright">© 2026 Connect. Все права защищены.</p>
+            </div>
+        </div>
+       </footer>
+    </div>
+
+<script>
+    const slider = document.getElementById('price-slider');
+    const output = document.getElementById('price-output');
+
+
+    const cards = [
+        document.querySelector('.order-card-first'),
+        document.querySelector('.order-card-second'),
+        document.querySelector('.order-card-third'),
+        document.querySelector('.order-card-fourth'),
+        document.querySelector('.order-card-fifth')
+    ];
+
+    slider.oninput = function() {
+    const maxPrice = parseInt(this.value);
+    output.innerHTML = 'Бюджет: ' + maxPrice.toLocaleString('ru-RU') + ' ₽';
+
+    cards.forEach(card => {
+        if (!card) return; // Проверка, что карточка существует
+        
+        const cardPrice = parseInt(card.getAttribute('data-price'));
+        
+        if (cardPrice <= maxPrice) {
+            card.style.display = 'block'; 
+        } else {
+            card.style.display = 'none';  
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка... WeDo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E1D9CC;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .loader-wrapper {
+            position: relative;
+            width: 79.49px;
+            height: 79.49px;
+            animation: spin 1s linear infinite;
+        }
+
+       
+        .spinner-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg at 50% 50%, #FF4D00 0deg, #DFA437 63.24deg, rgba(255, 255, 255, 0) 360deg);
+        }
+
+        
+        .spinner-inner {
+            position: absolute;
+            width: 55.65px;
+            height: 55.65px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #E1D9CC; 
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        
+        .ellipse-dot {
+            position: absolute;
+            width: 11.92px;
+            height: 11.92px;
+            left: 34.18px;
+            top: 67.57px;
+            background: #FF4D00;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+       
+        .loading-text {
+            font-weight: 500;
+            font-size: 20px;
+            color: #444E5A;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="spinner-gradient"></div>
+        <div class="spinner-inner"></div>
+        <div class="ellipse-dot"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2500);
+        });
+    </script>
+</body>
+</html>

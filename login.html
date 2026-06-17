@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход WeDo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #444E5A; /* Сохранен ваш исходный цвет фона */
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px; /* Размер как в регистрации */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .logo-img { width: 180px; height: auto; } /* Размер как в регистрации */
+        
+        h1 {
+            font-weight: 900;
+            font-size: 60px;
+            color: #E1D9CC; /* Сохранен ваш исходный цвет */
+            text-align: center;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .form { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+
+        .input-group { display: flex; flex-direction: column; gap: 8px; }
+        .input-group label { font-weight: 600; font-size: 20px; color: #C89D58; } /* Сохранен ваш цвет */
+        
+        .input-group input {
+            width: 100%;
+            height: 70px; /* Размер как в регистрации */
+            background: transparent;
+            border: 4px solid #E1D9CC; /* Сохранен ваш цвет */
+            border-radius: 35px; /* Размер как в регистрации */
+            padding: 0 30px;
+            font-size: 20px;
+            color: #E1D9CC;
+            outline: none;
+        }
+
+        .password-wrapper { position: relative; width: 100%; }
+        .toggle-password {
+            position: absolute; right: 25px; top: 50%;
+            transform: translateY(-50%);
+            background: none; border: none; cursor: pointer;
+            font-weight: 700; color: #E1D9CC;
+            font-size: 18px;
+        }
+
+        .login-btn {
+            width: 100%; height: 70px;
+            background: #E1D9CC; border: none;
+            border-radius: 35px; font-size: 24px;
+            font-weight: 800; color: #472B0D;
+            cursor: pointer; margin-top: 10px;
+        }
+
+        .checkbox-group {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; font-size: 16px; margin: 10px 0;
+            color: #E1D9CC;
+        }
+
+        .input-error { 
+            border-color: #ff4d4d !important; 
+        }
+
+        .error-message { 
+            color: #ff4d4d; 
+            font-size: 14px; 
+            margin-left: 15px; 
+            display: block; }
+
+        .register-link {
+            display: flex; justify-content: center; gap: 10px;
+            font-size: 20px; color: #E1D9CC;
+        }
+        .register-link a { 
+            color: #C89D58; 
+            font-weight: 700; 
+            text-decoration: none; }
+
+        .link {
+            color: #C89D58; 
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0); 
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor; 
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .link:hover::after {
+            transform: scaleX(1); /* Линия выезжает */
+            transform-origin: bottom left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="asset/лого.png" alt="WeDo Logo" class="logo-img"></div>
+        <h1>ВХОД</h1>
+
+        <form class="form" id="loginForm" novalidate>
+            <div class="input-group">
+                <label>Электронная почта</label>
+                <input type="email" id="email" placeholder="ivan@example.com" required>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Пароль</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="••••••••" required>
+                    <button type="button" class="toggle-password">Показать</button>
+                </div>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <span class="checkbox-box"></span>
+                <label for="terms">Я соглашаюсь с условиями использования</label>
+            </div>
+            <span class="error-message"></span>
+
+            <button type="submit" class="login-btn">ВОЙТИ</button>
+        </form>
+
+        <div class="register-link">
+            <span>У меня нет аккаунта.</span>
+            <a href="regis.html" class="link">Зарегистрироваться</a>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('loginForm');
+        const toggleButtons = document.querySelectorAll('.toggle-password');
+
+        
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const passwordInput = button.previousElementSibling;
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    button.textContent = 'Скрыть';
+                } else {
+                    passwordInput.type = 'password';
+                    button.textContent = 'Показать';
+                }
+            });
+        });
+
+     
+        form.addEventListener('submit', (e) => {
+            const inputs = form.querySelectorAll('input');
+
+           
+            inputs.forEach(input => {
+                input.classList.remove('input-error');
+                // Ищем родителя с ошибкой
+                const group = input.closest('.input-group') || input.parentElement;
+                const errorSpan = group.querySelector('.error-message');
+                if (errorSpan) errorSpan.textContent = '';
+            });
+
+            
+            if (!form.checkValidity()) {
+                e.preventDefault();
+
+                inputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        input.classList.add('input-error');
+                        const group = input.closest('.input-group') || input.parentElement;
+                        const errorSpan = group.querySelector('.error-message');
+                        
+                        if (errorSpan) {
+                           
+                            if (input.type === 'checkbox') {
+                                errorSpan.textContent = 'Необходимо согласие';
+                            } else {
+                                errorSpan.textContent = 'Заполните это поле';
+                            }
+                        }
+                    }
+                });
+                return;
+            }
+
+            
+            e.preventDefault();
+            console.log("Вход выполнен успешно");
+             window.location.href = 'home (entrance).html';
+        });
+    });
+</script>
+</body>
+</html>
